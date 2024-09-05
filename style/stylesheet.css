@@ -1,0 +1,840 @@
+/* 1-GENERAL STYLES............................................................................................ */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'varela round', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.section-header{
+    text-align: center;
+}
+
+.section-title{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+.section-header .line{
+    height: 4px;
+    width: 60px;
+    background-color: rgb(41, 148, 148);
+    margin: 10px auto 70px auto;
+}
+
+.mid{
+    margin: 0 5%;
+}
+/* ............................................................................................................. */
+/* 2-COMMON STYLES.............................................................................................. */
+.overlay {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(12, 12, 56, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.ltr:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(12, 12, 56);
+    z-index: -1;
+}
+
+.ltr:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    
+}
+
+.ttb:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(33, 32, 32);
+    opacity: 0;
+}
+.ttb:hover::after{
+    width: 100%;
+    height: 100%;
+}
+/* ............................................................................................................. */
+/* 3-SECTIONS................................................................................................... */
+/* 3.1-HEADER................................................................................................... */
+.header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(12, 12, 56, 0.7);
+    z-index: 10;
+
+}
+
+.header img{
+    width: 80px;
+    height: 50px;
+    float: left;
+    margin-left: 140px;
+}
+
+.ul-header{
+    float: right;
+    margin: 15px 150px 0px 0px;
+    position: relative;
+}
+
+.ul-header li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 25px;
+    font-size: 16px;
+    position: relative;
+}
+
+.ul-header li a{
+    text-decoration: none;
+    color: rgb(106, 248, 248);
+}
+
+.ul-header li:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(221, 40, 40);
+}
+
+.ul-header li:hover::after{
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.ul-header .active-header-li:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(221, 40, 40);
+}
+
+.bp{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: #999;
+    color: #fff;
+    z-index: 20;
+    margin-top: 20px;
+}
+.blog:hover .bp{
+    display: block;
+}
+/* ..................................................................................................................... */
+/* 3.2-HOME............................................................................................................. */
+.home-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/home-bg.jpeg);
+    background-size: cover;
+}
+
+.home-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-title{
+    font-size: 55px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.home-p{
+    font-size: 20px;
+    color: #98955e;
+    word-spacing: 3px;
+    text-transform: lowercase;
+}
+
+.btn{
+    padding: 15px 20px;
+    margin: 10px 5px;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.btn2{
+    background-color: blue;
+    color: #fff;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+/* ........................................................................................................... */
+/* 3.3-WELCOME................................................................................................ */
+.wlc{
+    padding: 150px 0px;
+}
+
+.wlc-title{
+    font-size: 35px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.wlc-line{
+    height: 4px;
+    width: 60px;
+    background-color: rgb(41, 148, 148);
+    margin: 10px auto 20px;
+}
+
+.wlc-content{
+    overflow: auto;
+    height: 350px;
+}
+
+.wlc-item{
+    width: 30%;
+    height: 230px;
+    border: 1px solid black;
+    float: left;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.wlc-icon{
+    font-size: 35px;
+    color: rgb(41, 148, 148);
+    padding: 20px 0px 10px 0px;
+}
+
+.wlc-subtitle{
+    text-transform: capitalize;
+}
+
+.wlc-p{
+    color: rgb(160, 160, 160);
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    padding: 10px 5px 20px;
+}
+
+.wlc-item a{
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(41, 148, 148);
+}
+
+.wlc-item:hover .wlc-subtitle{
+    color: #fff;
+    transition: 0.5s;
+}
+/* ...................................................................................................... */
+/* 3.4-WORKS............................................................................................. */
+.works{
+    padding: 120px 0px;
+    background-color: #dfdfdf;
+}
+
+.works-content{
+    overflow: auto;
+}
+
+.works-item{
+    float: left;
+    position: relative;
+    width: 30% ;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+}
+
+.works-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.works-item:hover .overlay{
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(12, 12, 56, 0.7);
+}
+
+.works-info{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.works-span{
+    display: block;
+    text-transform: uppercase;
+    color: rgb(106, 248, 248);
+    font-size: 20px;
+}
+
+.works-h3{
+    color: #fff;
+    padding: 10px;
+}
+
+.works-icon{
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgb(106, 248, 248);
+}
+/* ...................................................................................................... */
+/* 3.5-OFFER............................................................................................. */
+.offer{
+    padding: 120px 0;
+}
+
+.offer-content{
+    overflow: auto;
+}
+
+.offer-item{
+    width: 30%;
+    height: 170px;
+    float: left;
+    border: 1px solid rgb(74, 74, 74);
+    padding: 30px 10px 30px 70px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.offer-mid{
+    margin: 10px 5%;
+}
+
+.offer-subtitle{
+    padding-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.offer-p{
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    line-height: 1.6;
+    color: rgb(160, 160, 160);
+}
+
+.offer-icon{
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    font-size: 30px;
+    color: rgb(41, 148, 148);
+}
+
+.offer-item:hover .offer-subtitle{
+    color: #fff;
+    transition: 0.5s;
+}
+/* ..................................................................................................... */
+/* 3.6-CHOOSE........................................................................................... */
+.choose{
+    background-color: #f6f5f5;
+    padding: 120px 0;
+}
+
+.choose-content{
+    overflow: auto;
+}
+
+.choose-item{
+    width: 50%;
+    float: left;
+}
+
+.choose-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.choose-line{
+    width: 60px;
+    height: 4px;
+    background-color: rgb(41, 148, 148);
+    text-align: left;
+    margin: 10px 0 20px;
+}
+
+.choose-p{
+    padding-right: 20px;
+    color: #999;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.choose-list{
+    list-style: none;
+}
+
+.choose-list li{
+    margin-bottom: 13px;
+    color: #999;
+}
+
+.choose-list li i{
+    color: rgb(66, 210, 210);
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.choose-img img{
+    width: 480px;
+    height: 400px;
+    margin-left: 55px;
+}
+
+.img-bullets{
+    list-style: none;
+    text-align: center;
+}
+
+.img-bullets li{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #a8a8a8;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+
+.img-bullets .li-active{
+    background-color: rgb(66, 210, 210);
+}
+
+.img-bullets li:hover{
+    background-color: rgb(66, 210, 210);
+}
+/* ............................................................................................... */
+/* 3.7-NUMBERS................................................ */
+.numbers{
+    position: relative;
+    background-image: url(../imgs/numbers-bg.webp);
+    height: 350px;
+    background-position: cover;
+    background-attachment: fixed;
+}
+
+.numbers-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.numbers-content{
+    padding-top: 120px;
+    overflow: auto;
+}
+
+.numbers-item{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.numbers-icon{
+    color: rgb(66, 210, 210);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.numbers-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.numbers-title , .numbers-span{
+    color: #fff;
+}
+/* ......................................................................................... */
+/* 3.8-PRICE................................................................................ */
+.price{
+    padding: 120px 0;
+    background-color: #e8e8e8;
+}
+
+.price-content{
+    overflow: auto;
+}
+
+.price-item{
+    float: left;
+    width: 30%;
+    padding: 30px 15px;
+    border: 1px solid #999;
+    text-align: center;
+    position: relative;
+}
+
+.price-span{
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #999;
+}
+
+.permonth{
+    width: 100px;
+    height: 100px;
+    padding: 12px 0;
+    margin: 20px auto;
+    border: 2px solid rgb(41, 148, 148);
+    border-radius: 50%;
+}
+
+.dollar{
+    font-size: 50px;
+}
+
+.month{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price-list{
+    list-style-type: none;
+}
+
+.price-list li{
+    color: #999;
+    line-height: 1.8;
+}
+
+.price-btn{
+    width: 120px;
+    margin: 15px auto auto;
+    padding: 5px;
+    border: 2px solid rgb(41, 148, 148);
+}
+
+.price-item:hover .price-span{
+    color: red;
+    transition: 0.5s;
+}
+.price-item:hover .permonth{
+    color: red;
+    transition: 0.5s;
+}
+.price-item:hover::after{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+/* ................................................................................................ */
+/* 3.9-TESTIMONIAL................................................................................. */
+.testimonial{
+    position: relative;
+    height: 350px;
+    background-image: url(../imgs/testimonial-section.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.testimonial-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-content{
+    width: 90%;
+    overflow: auto;
+    margin: auto;
+}
+
+.testimonial-item{
+    float: left;
+    width: 50%;
+    color: #fff;
+    padding-right: 20px;
+    padding-top: 55px;
+    margin-bottom: 110px;
+}
+
+.testimonial-top{
+    padding: 90px 20px 10px 150px;
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.testimonial-top img{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 65px;
+    top: 82px;
+    border-radius: 50%;
+}
+
+.testimonial-top span{
+    color: rgb(106, 248, 248);
+}
+
+.testimonial-p{
+    text-transform: capitalize;
+    margin-left: 75px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+/* .................................................................................................. */
+/* 3.10-TEAM.......................................................................................... */
+.team{
+    padding: 120px 0;
+}
+
+.team-content{
+    overflow: auto;
+    padding-left: 70px;
+}
+
+.team-item{
+    float: left;
+    width: 28%;
+    background-color: #d5d2d2;
+    padding: 17px 13px;
+    text-align: center;
+    position: relative;
+}
+
+.team-img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.team-img img{
+    width: 100%;
+    height: 185px;
+}
+
+.team-info-title{
+    color: #222;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+
+.team-info-text{
+    color: #999;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.team-item:hover .overlay{
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(12, 12, 56, 0.5);
+}
+
+.overlay .team-icon{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(79, 213, 213);
+    color: #fff;
+    margin-left: auto;
+}
+
+.overlay .team-icon i{
+    line-height: 40px;
+}
+
+.team-item:hover::after{
+    opacity: 0.4;
+    transition: 1s;
+}
+
+.team-item:hover .team-info-title{
+    color: #fff;
+}
+.team-item:hover .team-info-text{
+    color: rgb(60, 179, 179);
+}
+/* ............................................................................................... */
+/* 3.11-NEWS...................................................................................... */
+.news-content{
+    overflow: auto;
+    background-color: #f5f4f4;
+}
+
+.news-item{
+    float: left;
+    width: 30%;
+    background-color: #fff;
+    position: relative;
+}
+
+.news-img{
+    width: 60%;
+}
+
+.news-img img{
+    width: 100%;
+    height: 280px;
+    margin-left: 25px;
+}
+
+.news-info{
+    padding: 20px;
+}
+
+.news-list{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.news-list li{
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+    color: #999;
+}
+
+.news-list li i{
+    color: rgb(41, 148, 148);
+}
+
+.news-subtitle{
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.news-text{
+    color: #999;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.news-link{
+    text-transform: capitalize;
+    color: rgb(41, 148, 148);
+}
+
+.news-item:after{
+    background-color: rgb(41, 174, 174);
+}
+
+.news-item:hover::after{
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.news-item:not(:hover)::after{
+    height: 0;
+    opacity: 0;
+    transition: 1s;
+}
+/* ....................................................................................................... */
+/* 3.12-FOOTER............................................................................................ */
+.footer{
+    background-color: rgb(19, 19, 75);
+    height: 300px;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer-img{
+    width: 160px;
+    height: 70px;
+}
+
+.footer-links{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-links li{
+    display: inline-block;
+    background-color: rgb(53, 203, 203);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-links li a{
+    display: block;
+    font-size: 23px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-links li a i{
+    line-height: 50px;
+}
+
+.footer-links li:hover{
+    background-color: rgb(36, 150, 150);
+}
+
+.footer-text{
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
